@@ -11,9 +11,5 @@
 #include<readline/history.h>
 
 int main(int argc, char **argv[])
-{
-
-
-
 
 #endif
