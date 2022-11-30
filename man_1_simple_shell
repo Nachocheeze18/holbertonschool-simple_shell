@@ -1,15 +1,52 @@
-.TH man 8 "30 November 2022" "1.0" "nuseradd man page"
-.SH NAME
-nuseradd \- create a new LDAP user 
-.SH SYNOPSIS
-nuseradd [USERNAME]
-.SH DESCRIPTION
-nuseradd is high level shell program for adding users to LDAP server.  On Debian, administrators should usually use nuseradd.debian(8) instead.
-.SH OPTIONS
-The nuseradd does not take any options. However, you can supply username.
-.SH SEE ALSO
-useradd(8), passwd(5), nuseradd.debian(8) 
-.SH BUGS
-No known bugs.
-.SH AUTHOR
-Vivek Gite (vivek@nixcraft.net.in)
+.Dd 11/30/22
+.Dt 
+.Os UBUNTU 20.04 LTS
+.Sh NAME
+.Nm holbertonschool-simple_shell
+.Nd Holberton School format output conversion
+.Sh SYNOPSIS
+.Nm #include "main.h"
+.Pp
+.Nm _printf(const char *
+.Ar format
+, ...);
+.Sh DESCRIPTION
+The
+.Nm
+function is an imitator of the C <stdio.h> library printf() function.
+The
+.Nm
+function writes values to
+.Ar stdout
+according to a
+.Ar format
+a string that says how arguments will be converted for output. Arguments will be decribed further  down this manual.
+.Pp
+.Sh Format of the string
+.Pp
+The
+.Ar format
+The Format specifier is a string used in the formatted input and output functions. The format string determines the format of the input and output.The format string always starts with a '%' character. Thecommonly used format specifiers in printf() function are: Format specifier.
+.Nm
+will misbehave
+.Pp
+.Sh  Conversion specifiers
+.Pp
+A conversion specifier is a character that is preceded by a '%' character.
+.Pp
+.Bl -tag -width -indent
+.It d, i
+A signed integer value is printed
+.It s
+A string (character array) is printed, up to but not including the terminating
+null ('\\0') byte.
+A single character is printed.
+.El
+.Pp
+.Sh RETURN VALUE
+When the
+.Nm
+function successfuly executes, the function returns the number
+of characters printed.
+If an output error is encountered, a negative value is returned.
+.Sh NOTES
