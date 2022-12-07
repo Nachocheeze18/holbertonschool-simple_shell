@@ -1,5 +1,5 @@
 .Dd 11/30/22
-.Dt 
+.Dt
 .Os UBUNTU 20.04 LTS
 .Sh NAME
 .Nm holbertonschool-simple_shell
