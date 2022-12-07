@@ -3,7 +3,45 @@
 char *readline();
 char **split
 
+char *split_line(char *line)
+{
+	int buffsize = 1024, position = 0;
+	char *tokens = malloc(buffsize * sizeof(char *));
+	char *token;
 
+	if (!tokens)
+	{
+		fprintf(stderr, "%sdash: Allocation error%s\n", RED, RESET);
+		exit(EXIT_FAILURE);
+	}
+
+	token = strtok(line, TOK_DELIM);
+	while (token != NULL)
+
+  {
+	  tokens[position] = token;
+	  position++;
+
+	  if (position >= buffsize)
+	  {
+
+		  buffsize += TK_BUFF_SIZE;
+		  tokens = realloc(tokens, buffsize * sizeof(char * ));
+		  if (!tokens)
+	{
+		fprintf(stderr, "%sdash: Allocation error%s\n", RED, RESET);
+		exit(EXIT_FAILURE);
+	}
+	  }
+
+	  token = strtok(NULL, TOK_DELIM);
+
+  }
+
+  tokens[position] = NULL;
+
+  return tokens;
+}
 
 
 char *read_line()
@@ -12,7 +50,7 @@ char *read_line()
 	int position = 0;
 	char *buffer = malloc(sizeof(char) * buffsize);
 	int c;
-	
+
 	if (!buffer)
 	{
 		printf(stderr, "%sdash: allocation error%s\n", RED, RESET);
@@ -64,7 +102,7 @@ void loop(void)
                 rline = read-line();
                 free(line);
         }
-                while (status);
+               while (status);
 }
 
 int main()
