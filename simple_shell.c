@@ -1,9 +1,12 @@
 #include "shell_system.h"
 
 /**
- * main - used when your program must take command line arguments.
+ * main - making a loop that waits for the user to type a command 
+ * and always makes a new line.
  *
  *
  *
  */
-int main(int argc char *argv)
+void loop()
+{
+
