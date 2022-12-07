@@ -12,7 +12,6 @@
 
 char rline(void);
 void loop(void);
-int main(int argc, char **argv[]);
 int main(int ac, char *av[]);
 void printDir(void);
 #endif

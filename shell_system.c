@@ -1,4 +1,4 @@
-#include "shell_system.h"
+#include "shell_systems.h"
 
 char *readline();
 char **split
@@ -77,7 +77,7 @@ char *read_line()
 
 			if (!buffer)
 			{
-				printf(sstderr, "dash: Allocation error\n");
+				printf(stderr, "dash: Allocation error\n");
 				exit(EXIT_FAILURE);
 			}
 
@@ -97,7 +97,7 @@ void loop(void)
 	do {
 		printf("%s, \n");
 		rline = read_line();
-		free(line);
+		free(rline);
 		} while (status);
 }
 

@@ -3,9 +3,9 @@
 .Os UBUNTU 20.04 LTS
 .Sh NAME
 .Nm holbertonschool-simple_shell
-.Nd Holberton School format output conversion
+.Nd Holberton School making a simple shell
 .Sh SYNOPSIS
-.Nm #include "shell_system.h"
+.Nm #include "shell_systems.h"
 .Pp
 .Nm _printf(const char *
 .Ar format
