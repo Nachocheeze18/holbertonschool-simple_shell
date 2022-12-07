@@ -17,30 +17,28 @@ char *split_line(char *line)
 
 	token = strtok(line, TOK_DELIM);
 	while (token != NULL)
-
-  {
-	  tokens[position] = token;
-	  position++;
-
-	  if (position >= buffsize)
-	  {
-
-		  buffsize += TK_BUFF_SIZE;
-		  tokens = realloc(tokens, buffsize * sizeof(char * ));
-		  if (!tokens)
 	{
-		fprintf(stderr, "%sdash: Allocation error%s\n", RED, RESET);
-		exit(EXIT_FAILURE);
+		tokens[position] = token;
+		position++;
+
+		if (position >= buffsize)
+		{
+
+			buffsize += TK_BUFF_SIZE;
+			tokens = realloc(tokens, buffsize * sizeof(char *));
+			if (!tokens)
+			{
+				fprintf(stderr, "%sdash: Allocation error%s\n", RED, RESET);
+				exit(EXIT_FAILURE);
+			}
+		}
+
+		token = strtok(NULL, TOK_DELIM);
 	}
-	  }
 
-	  token = strtok(NULL, TOK_DELIM);
+	tokens[position] = NULL;
 
-  }
-
-  tokens[position] = NULL;
-
-  return tokens;
+	return (tokens);
 }
 
 
@@ -63,7 +61,7 @@ char *read_line()
 		if (c == EOF || c == '\n')
 		{
 			buffer[position] = '\0';
-			return buffer;
+			return (buffer);
 		}
 
 		else
@@ -72,7 +70,7 @@ char *read_line()
 		}
 		position++;
 
-		if (position >= buffsize) 
+		if (position >= buffsize)
 		{
 			buffsize += 1024;
 			buffer = realloc(buffer, buffsize);
@@ -93,20 +91,18 @@ char *read_line()
 
 void loop(void)
 {
-        char *rline;
-        int status = 1;
+	char *rline;
+	int status = 1;
 
-        do
-        {
-                printf("%s, \n");
-                rline = read-line();
-                free(line);
-        }
-               while (status);
+	do {
+		printf("%s, \n");
+		rline = read_line();
+		free(line);
+		} while (status);
 }
 
-int main()
+int main(void)
 {
 	loop();
-	return 0;
+	return (0);
 }
