@@ -1,3 +1,4 @@
+
 #ifndef SHELL_SYSTEM
 #define SHELL_SYSTEM
 
@@ -10,9 +11,9 @@
 #include<readline/readline.h>
 #include<readline/history.h>
 
-int main(int argc, char **argv[])
-{
 
+char rline();
+void loop();
 
 
 
