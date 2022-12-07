@@ -1,11 +1,11 @@
 .Dd 11/30/22
-.Dt 
+.Dt
 .Os UBUNTU 20.04 LTS
 .Sh NAME
 .Nm holbertonschool-simple_shell
 .Nd Holberton School format output conversion
 .Sh SYNOPSIS
-.Nm #include "main.h"
+.Nm #include "shell_system.h"
 .Pp
 .Nm _printf(const char *
 .Ar format
