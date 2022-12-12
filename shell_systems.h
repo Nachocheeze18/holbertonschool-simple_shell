@@ -10,11 +10,15 @@
 #include<readline/readline.h>
 #include<readline/history.h>
 
+
+extern char **environ;
+
+
 char rline(void);
 void loop(void);
 int main(int ac, char *av[]);
 void printDir(void);
-char *split_line(char *line);
+char **splitstring(char *str, const char *delim);
 char *read_line();
-int main(void);
+int mainy(void);
 #endif
