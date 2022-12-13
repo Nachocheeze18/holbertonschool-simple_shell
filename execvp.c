@@ -1,3 +1,5 @@
+#include "shell_systems.h"
+
 int dash_execute(char * * args) {
 	pid_t cpid;
 	int status;
