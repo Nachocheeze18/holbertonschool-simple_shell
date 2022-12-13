@@ -14,4 +14,11 @@ char rline(void);
 void loop(void);
 int main(int ac, char *av[]);
 void printDir(void);
+char *read_line();
+char **split_line(char *);
+int dash_exit(char **);
+int dash_execute(char **);
+int dash_execute(char **args);
+int main();
+char * * split_line(char * line);
 #endif

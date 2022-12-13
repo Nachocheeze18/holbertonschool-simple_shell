@@ -26,7 +26,7 @@ if (cpid == 0) {
 
 	} else if (cpid < 0)
 		printf(RED "Error forking"
-		RESET "\n");
+		"RESET\n");
 	else {
 		waitpid(cpid, & status, WUNTRACED);
 	}
@@ -43,7 +43,7 @@ char **split_line(char * line) {
 	char *token;
 
 		if (!tokens) {
-			fprintf(stderr, "%sdash: Allocation error%s\n", RED, RESET);
+			fprintf(stderr, "%sdash: Allocation error%s\n", RED, "RESET");
 			exit(EXIT_FAILURE);
 		}
 		token = strtok(line, TOK_DELIM);
@@ -56,7 +56,7 @@ char **split_line(char * line) {
 				tokens = realloc(tokens, buffsize * sizeof(char * ));
 
 				if (!tokens) {
-				fprintf(stderr, "%sdash: Allocation error%s\n", RED, RESET);
+				fprintf(stderr, "%sdash: Allocation error%s\n", RED, "RESET");
 				exit(EXIT_FAILURE);
 			}
 		}
@@ -74,7 +74,7 @@ char *read_line() {
 	int c;
 
 	if (!buffer) {
-		fprintf(stderr, "%sdash: Allocation error%s\n", RED, RESET);
+		fprintf(stderr, "%sdash: Allocation error%s\n", RED, "RESET");
 		exit(EXIT_FAILURE);
 	}
 
@@ -100,7 +100,7 @@ char *read_line() {
 	}
 }
 
-void loop() {
+void loop(void) {
 	char *line;
 	char **args;
 	int status = 1;
