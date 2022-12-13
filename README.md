@@ -1,4 +1,4 @@
-##General Content
+## General Content
 
 *What is a Shell?
 *How Do I compile it?
@@ -10,15 +10,15 @@
 *Author's
 *License
 
-##What is a Shell?
+## What is a Shell?
 
  The shell is the outermost layer of the operating system. Shells incorporate a programming language to control processes and files, as well as to start and control other programs.
 
-##How do i compile it?
+## How do i compile it?
 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
-##Essentials for a Simple Shell
+## Essentials for a Simple Shell
 
 >Display a prompt and wait for the user to type a command. A command line always ends with a new line.
 
