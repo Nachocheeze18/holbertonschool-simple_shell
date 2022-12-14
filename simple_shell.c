@@ -13,7 +13,7 @@ void loop() {
    int status = 1;
 
    do {
-      printf("> ");
+      printf("$ ");
       line = read_line();
       flag = 0;
       args = "split_lines(line)";
