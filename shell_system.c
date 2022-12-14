@@ -24,15 +24,15 @@ int dash_execute(char **args) {
 
 	cpid = fork();
 
-if (cpid == 0) {
-	if (execvp(args[0], args) < 0)
+	if (cpid == 0) {
+		if (execvp(args[0], args) < 0)
 	printf("dash: command not found: %s\n", args[0]);
 	exit(EXIT_FAILURE);
 
 	} else if (cpid < 0)
-		printf("Error forking\n");
+	printf("Error forking\n");
 	else {
-		waitpid(cpid, & status, WUNTRACED);
+			waitpid(cpid, & status, WUNTRACED);
 	}
 	return 1;
 }
@@ -89,7 +89,6 @@ char **splitstring(char *str, const char *delim)
 		i++;
 	}
 	copy[i] = '\0';
-
 	token = strtok(copy, delim);
 	array = malloc((sizeof(char *) * 2));
 	array[0] = _strdup(token);
@@ -108,7 +107,6 @@ char **splitstring(char *str, const char *delim)
 	return (array);
 }
 
-`
 char *read_line() {
 	int buffsize = 1024;
 	int position = 0;

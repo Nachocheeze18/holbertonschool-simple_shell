@@ -14,10 +14,16 @@
 extern char **environ;
 
 
+<<<<<<< HEAD
 void loop(void);/** prompt for command input from user*/
 int mainf(int ac, char *av[]);/** to get ppid*/
 void printDir(void);
+=======
+char rline(void);
+void loop(void);
+int main(int ac, char *av[]);
+>>>>>>> ab3fb9729fbf7e2eec19e5cf6ba448cef6a2e4b9
 char **splitstring(char *str, const char *delim);
 char *read_line();
-int mainy(void);
+int main(void);
 #endif
