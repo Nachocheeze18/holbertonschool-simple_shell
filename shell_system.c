@@ -112,7 +112,7 @@ char *read_line() {
 	int position = 0;
 	char *buffer = malloc(sizeof(char) * buffsize);
 	int c;
-	
+
 	if (!buffer) {
 		fprintf(stderr, "%sdash: Allocation error%s\n", RED, RESET);
 		exit(EXIT_FAILURE);
