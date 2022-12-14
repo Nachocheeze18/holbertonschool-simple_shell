@@ -1,6 +1,8 @@
 #ifndef SHELL_SYSTEM
 #define SHELL_SYSTEM
-#define TOK_DELIM " \t\r\n"                                                                             #define RED "\033[0;31m"                                                                                #define RESET "\e[0m"#define SHELL_SYSTEM
+#define TOK_DELIM " \t\r\n"
+#define RED "\033[0;31m"
+#define RESET "\e[0m"
 
 #include <stdio.h>
 #include<string.h>
