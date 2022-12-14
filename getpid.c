@@ -6,7 +6,7 @@
  *@av:a NULL terminated array of strings
  * Return: Always 0.
  */
-int main(int ac, char *av[])
+int mainf(int ac, char *av[])
 {
 pid_t my_pid;
 
