@@ -82,7 +82,7 @@ And Handle errors.
 * `execvp.c`: This function checks for two conditions: fork() and execve()
 * `cmds.c`:this file has the function to readlines
 * `exit.c`:function to be able to exit the shell
-* `splitline.c`:function to splitlines 
+* `splitline.c`:function to splitlines
 
 ## Contributing
 
