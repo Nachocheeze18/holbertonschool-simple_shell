@@ -10,8 +10,8 @@
 
 char **split_line(char *line)
 {
-	int buffsize = 1024, position = 0;
 	char **tokens = malloc(buffsize * sizeof(char *));
+	const char *del = " \t\n";
 	char *token;
 
 		if (!tokens)
@@ -19,16 +19,12 @@ char **split_line(char *line)
 			fprintf(stderr, "%sdash: Allocation error%s\n", "RED", "RESET");
 			exit(EXIT_FAILURE);
 			}
-			token = strtok(line, "TOK_DELIM");
+			token = strtok(line, del);
 	while (token != NULL)
 	{
 		tokens[position] = token;
 		position++;
 
-	if (position >= buffsize)
-	{
-		buffsize += "TK_BUFF_SIZE";
-		tokens = realloc(tokens, buffsize * sizeof(char *));
 
 	if (!tokens)
 		{
@@ -37,7 +33,7 @@ char **split_line(char *line)
 		}
 	}
 
-	token = strtok(NULL, "TOK_DELIM");
+	token = strtok(NULL, del);
 	}
 
 	tokens[position] = NULL;
